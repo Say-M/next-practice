@@ -1,0 +1,32 @@
+.navbar {
+  background: #040506;
+  color: #fff;
+}
+.navbar header {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar header .logo a {
+  color: #fff;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+}
+.navbar header .lists {
+  display: flex;
+  list-style: none;
+}
+.navbar header .lists a {
+  display: block;
+  padding: 0.8rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+}
+.navbar header .lists a:hover {
+  color: #2196f3;
+}

@@ -1,0 +1,15 @@
+.error {
+  text-align: center;
+  padding: 3rem 0;
+}
+.error h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.error p,
+.error a {
+  font-size: 2rem;
+}
+.error a {
+  font-weight: 600;
+}

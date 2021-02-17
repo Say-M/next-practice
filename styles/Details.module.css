@@ -1,0 +1,15 @@
+.details h1 {
+  margin-bottom: 0;
+}
+.details .bg_white {
+  background: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.details .bg_white p strong {
+  text-transform: capitalize;
+  margin-right: 0.8rem;
+}
+.details .bg_white p span {
+  color: #434749;
+}
