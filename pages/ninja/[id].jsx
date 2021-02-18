@@ -1,26 +1,23 @@
-import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Meta from '../../components/Meta'
 import styles from '../../styles/Details.module.css'
 
-export const getStaticPaths = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users')
-    const people = await res.json()
+// export const getStaticPaths = async () => {
+//     const res = await fetch('https://jsonplaceholder.typicode.com/users')
+//     const people = await res.json()
 
-    const paths = people.map(person => ({ params: { id: person.id.toString() } }))
-    return { paths, fallback: false }
-}
-export async function getStaticProps({ params }) {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
+//     const paths = people.map(person => ({ params: { id: person.id.toString() } }))
+//     return { paths, fallback: false }
+// }
+export const getServerSideProps = async context => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${context.params.id}`)
     const person = await res.json()
     return { props: { person } }
 }
 const details = ({ person }) => {
-    const router = useRouter()
     return (
         <>
-            <Head>
-                <title>{person.name}'s Profile</title>
-            </Head>
+            <Meta title={person.name} />
             <div className="container">
                 <div className={styles.details}>
                     <h1>{person.username}</h1>

@@ -1,8 +1,8 @@
-import Head from "next/head"
 import Link from "next/link"
+import Meta from "../../components/Meta"
 import styles from '../../styles/Ninja.module.css'
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users')
     const people = await res.json()
     return {
@@ -12,9 +12,7 @@ export const getStaticProps = async () => {
 const Ninja = ({ people }) => {
     return (
         <>
-            <Head>
-                <title>All Ninjas</title>
-            </Head>
+            <Meta title="All ninja list" />
             <div className="container">
                 <h1>Ninja lists</h1>
                 <ul className={styles.ninja_lists}>

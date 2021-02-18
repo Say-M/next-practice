@@ -1,11 +1,9 @@
-import Head from "next/head"
+import Meta from "../components/Meta"
 
 const about = () => {
     return (
         <>
-            <Head>
-                <title>About Page</title>
-            </Head>
+            <Meta title="Ninja About" />
             <div className='container'>
                 <h1>About</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum suscipit iste dolores quibusdam, labore, et, fuga odit velit corrupti eius alias beatae quidem totam obcaecati optio architecto tenetur? Accusamus, ea.</p>
